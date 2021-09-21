@@ -42,16 +42,8 @@ def forceWait(timeSleep :int):
     time.sleep(timeSleep)
 
 
-def runDriver(driver: WebDriver): 
 
-    # navigation
-    loginToDashboard(driver)
-    fillWorkingHours(driver)
-
-
-    # wait to not close driver
-    forceWait(20)
-
+# functions
 def loginToDashboard(driver: WebDriver ):
     print('\n=================================================')
     print(' STARTING TO LOGIN')    
@@ -68,8 +60,6 @@ def loginToDashboard(driver: WebDriver ):
 
     driver.implicitly_wait(40)
     findByXPathClickElement('Login - Form - Btn Clock Dashboard', HTMLElements.btnClockDashboard, driver)
-
-
 
 def fillWorkingHours(driver: WebDriver):
     print('\n=================================================')
@@ -95,4 +85,16 @@ def fillWorkingHours(driver: WebDriver):
     driver.implicitly_wait(40)
 
 
+def runDriver(driver: WebDriver): 
+
+    # navigation
+    loginToDashboard(driver)
+    fillWorkingHours(driver)
+
+
+    # wait to not close driver
+    forceWait(20)
+
+
+# main code
 runDriver(configDriver())

@@ -12,7 +12,7 @@ To run the project, first you need:
     ```
 
 
-Then go to `.env` file and change the values to your data:  
+Then create a `.env` file in the root folder and change the values to your data:  
 ```bash
 MELI_USERNAME=your_user
 MELI_PASSWORD=your_password
